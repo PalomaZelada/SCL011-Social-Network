@@ -3,7 +3,8 @@ import { loginUser } from "../models/user.js";
 export const templateLogin = ()=>{
     const containerLogin = document.createElement("div");
 
-    const contentLogin = `<input id="getEmail" type="email" placeholder="Correo"/>
+    const contentLogin = `<div id="welcomeMessage">Bienvenida a FeministPWR, el primer sitio solo para mujeres en el cual podras hablar temas de interes libremente, sin prejuicios. Registrate aquí</div>
+    <input id="getEmail" type="email" placeholder="Correo"/>
     <input id="getPassword" type="password" placeholder="Contraseña"/>
     <button id="button-login" type="button">Iniciar Sesión</button>
 `
