@@ -13,4 +13,4 @@ Para identificar los temas que más le interesaban a nuestras futuras usuarias r
 - Aborto, acoso, abuso
 
 Dentro de la encuesta también preguntamos la preferencia de participación de hombres en esta red social y alrededor del 80% prefería que fuera un sitio en el que solo se compartiera con mujeres. 
-[Estadística para Usuarios](https://github.com/PalomaZelada/SCL011-Social-Network/blob/master/src/IMG/estadismujeres.png)
+![Estadística para Usuarios](https://github.com/PalomaZelada/SCL011-Social-Network/blob/master/src/IMG/estadismujeres.png)
