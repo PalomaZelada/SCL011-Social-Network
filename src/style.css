@@ -1,0 +1,12 @@
+body {
+    background-image: url(IMG/img.jpg);
+    background-repeat: no-repeat;
+ display: flex;
+  align-items: center;
+  width: 100px;
+  flex-direction: column;
+  height: 100%;
+  background-size: 280%;
+  
+
+}
