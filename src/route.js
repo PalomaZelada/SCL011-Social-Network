@@ -5,7 +5,7 @@ import {templateRegister} from "./views/templateRegister.js";
 
 const changeRouter = (hash) => {
     if(hash === ''){
-        return showTemplate('#/home');
+        return showTemplate('#/login');
     }
 
     if(hash === '#/login'){
@@ -15,6 +15,9 @@ const changeRouter = (hash) => {
         return showTemplate(hash);
     }
     if(hash ==='#/register'){
+        return showTemplate(hash);
+    }
+    if(hash ==='#/home'){
         return showTemplate(hash);
     }
 };
