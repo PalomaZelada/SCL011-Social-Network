@@ -4,8 +4,8 @@ import {templateHome} from "./views/templateHome.js";
 import {templateRegister} from "./views/templateRegister.js";
 
 const changeRouter = (hash) => {
-    if(hash === ''){
-        return showTemplate('#/home');
+    if(hash === '#/home'){
+        return showTemplate(hash);
     }
 
     if(hash === '#/login'){
@@ -17,6 +17,7 @@ const changeRouter = (hash) => {
     if(hash ==='#/register'){
         return showTemplate(hash);
     }
+   
 };
 
 const showTemplate = (hash) =>{
@@ -40,7 +41,8 @@ switch (router){
     case 'register':
         containerRoot.appendChild(templateRegister());
     break;
-
+    
+   
     default:
         containerRoot.innerHTML = `<h3>Error 404</h3>`;
 }

@@ -7,6 +7,7 @@ const init = () => {
  window.addEventListener('load', init);
 
  var db = firebase.firestore();
+ 
  db.collection("users").add({
     first: "Ada",
     last: "Lovelace",
