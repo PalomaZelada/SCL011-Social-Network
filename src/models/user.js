@@ -1,6 +1,3 @@
-import { templateHome } from "../views/templateHome.js"
-import { templateLogin } from "../views/templateLogin.js"
-
 //Crear cuenta
 export const newAccount= (newEmail, newPassword) =>{
     
@@ -35,7 +32,7 @@ export const loginUser = (getEmail, getPassword)=>{
  
  //Iniciar sesion con google
 export const googleLogin= ()=>{
-    // if (!firebase.auth().currentUser){
+  //  if (!firebase.auth().currentUser){
     
       var provider = new firebase.auth.GoogleAuthProvider();
   
@@ -56,7 +53,7 @@ export const googleLogin= ()=>{
       // ...
     });
   }
-  // }
+ //}
 
 //Cerrar sesion
 export const logOut = () => {
@@ -84,6 +81,7 @@ const observerMode = () => {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+      //console.log(displayName, email, uid)
       // ...
     } else {
       // User is signed out.
