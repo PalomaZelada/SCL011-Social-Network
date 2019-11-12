@@ -1,7 +1,7 @@
 header {
     background-image: url(IMG/descarga.jpg);
     background: no-repeat;
-    
+
 }
 
 body {
@@ -52,7 +52,7 @@ h2{
     transform: translate(-170%,1200%);
     font-size: 90%;
 }
-}
+
 h3{ margin: 20px auto;
     width: 90%;
     max-width: 1000px;
@@ -89,9 +89,9 @@ img{
 }
 
 h5{
-    right: 50 %;
+    right: 50%;
     border-radius: 0%;
- position: absolute;
- width: 120px;
- height: 120px;
+    position: absolute;
+    width: 120px;
+    height: 120px;
 }
