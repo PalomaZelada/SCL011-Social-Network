@@ -1,7 +1,14 @@
+import { templateHome } from "../views/templateHome.js"
+import { templateLogin } from "../views/templateLogin.js"
+
 //Crear cuenta
 export const newAccount= (newEmail, newPassword) =>{
     
-    firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword)
+    // .then(function(){
+    //   templateHome()
+    // })
+    .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -13,7 +20,11 @@ export const newAccount= (newEmail, newPassword) =>{
 //Iniciar sesion 
 export const loginUser = (getEmail, getPassword)=>{
   
-    firebase.auth().signInWithEmailAndPassword(getEmail, getPassword).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(getEmail, getPassword)
+    // .then(function(){
+    //   templateHome()
+    //})
+    .catch(function(error) {
      // Handle Errors here.
      var errorCode = error.code;
      var errorMessage = error.message;
@@ -47,3 +58,39 @@ export const googleLogin= ()=>{
   }
   // }
 
+//Cerrar sesion
+export const logOut = () => {
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log("Sesion cerrada")
+  }).catch(function(error) {
+    // An error happened.
+    console.log("Error")
+  });
+  
+}
+
+//Observador
+const observerMode = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      window.location.hash = "#/home";
+            console.log("Usuario activo")
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      // ...
+      window.location.hash = "#/login";
+            console.log("No hay usuario activo");
+    }
+  });
+}
+observerMode()

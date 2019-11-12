@@ -1,4 +1,5 @@
 import { newAccount } from "../models/user.js";
+import { addNewUser } from "../models/initFirestore.js";
 
 export const templateRegister = ()=>{
     const containerRegister = document.createElement("div");
@@ -18,6 +19,7 @@ containerRegister.innerHTML = contentRegister;
         let newEmail= document.getElementById("newEmail").value;
         let newPassword= document.getElementById("newPassword").value;
         newAccount(newEmail, newPassword);  
+        addNewUser();
         console.log(name, newEmail, newPassword);
 
     } )         

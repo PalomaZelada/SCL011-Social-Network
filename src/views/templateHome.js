@@ -2,39 +2,28 @@ import { googleLogin } from "../models/user.js";
 
  
 export const templateHome = () =>{
-    const containerHome = document.createElement("nav");
+    const containerHome = document.createElement("div");
 
-    const contentHome = `<h3 id="nav" class="nav-bar">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-        <button id="loginWithGoogle"><a href=""class="nav-link">Iniciar Sesión con Google</a></button>
-        </li>
-        <li class="nav-item">
-        <button><a href="#/register" class="nav-link disabled">Crear Cuenta</a></button>
-        </li>
-      </ul>
-    </div>
-  </div>  
-</h3>`;
-containerHome.innerHTML = contentHome;
-document.getElementById("root").appendChild(containerHome).innerHTML;
-
-let btnGoogle = document.getElementById("loginWithGoogle");
-btnGoogle.addEventListener('click', () =>{
-   googleLogin();
-})
-let menubar = new menubar ({
-    blur:true,
-    overlay:true
-});
-
-    console.log("HOME");
+    const contentHome = `<h3>HOME</h3>
+    <textarea id="newPost" rows="10" cols="70" placeholder="Deja tu opinion"></textarea>
+    <button id="logOut">Cerrar Sesion</button>
+    <button id="publish"> Publicar </button>
+    <div id="publishPost"></div>
+    `
     
+    containerHome.innerHTML = contentHome;
+    document.getElementById("root").appendChild(containerHome).innerHTML;
 
-return containerHome;
+    const logOutBtn = document.getElementById("logOut");
+    logOutBtn.addEventListener('click', () => {
+        logOut();
+    });
+
+    const publishBtn = document.getElementById("publish");
+    publishBtn.addEventListener('click',() => {
+        addNewPost();
+        showAllPost();
+
+    });
+    return containerHome;
 }
-
-
-
-
-
