@@ -1,9 +1,9 @@
 import { googleLogin } from "../models/user.js";
 
 export const templateGoogle = () => {
-    const containerGoogle = document.createElement("div");
+    const containerGoogle = document.createElement("nav");
 
-    // const contentGoogle = `<button id="googleBtn">Inicia Sesión con Google</button>`;
+    //const contentGoogle = ``;
     // containerGoogle.innerHTML = contentGoogle;
     // document.getElementById("root").appendChild(containerGoogle).innerHTML;
 
@@ -13,3 +13,4 @@ export const templateGoogle = () => {
     })
 return containerGoogle;
 }
+
