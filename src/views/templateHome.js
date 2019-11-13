@@ -39,13 +39,13 @@ export const printPost = (doc) => {
      <div id="allPosts">${doc.data().newComment}</div>
      <p id=emailPost>${doc.data().userId}</p>
      <button id=editPost>Editar</button>
-     <button id=deletePost>Borrar</button>
+     <button id=deletePost${doc.id}>Borrar</button>
          `
-let getPostId = doc.id
-console.log(getPostId)
-const deleteBtn = document.getElementById("deletePost");
+// let getPostId = doc.id
+// console.log(getPostId)
+const deleteBtn = document.getElementById("deletePost"+doc.id);
 deleteBtn.addEventListener('click', () => {
-    deletePost(getPostId);
+    deletePost(doc.id);
         })
 }
 
