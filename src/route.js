@@ -2,6 +2,7 @@ import {templateLogin} from "./views/templateLogin.js";
 import {templateGoogle} from "./views/templateGoogle.js";
 import {templateHome} from "./views/templateHome.js";
 import {templateRegister} from "./views/templateRegister.js";
+import {templateForgotPass} from "./views/templateForgotPass.js";
 
 const changeRouter = (hash) => {
     if(hash === ''){
@@ -18,6 +19,9 @@ const changeRouter = (hash) => {
         return showTemplate(hash);
     }
     if(hash ==='#/home'){
+        return showTemplate(hash);
+    }
+    if(hash === '#/forgotPassword'){
         return showTemplate(hash);
     }
 };
@@ -42,6 +46,10 @@ switch (router){
 
     case 'register':
         containerRoot.appendChild(templateRegister());
+    break;
+
+    case'forgotPassword':
+        containerRoot.appendChild(templateForgotPass());
     break;
 
     default:

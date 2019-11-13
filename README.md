@@ -14,3 +14,7 @@ Para identificar los temas que más le interesaban a nuestras futuras usuarias r
 
 Dentro de la encuesta también preguntamos la preferencia de participación de hombres en esta red social y alrededor del 80% prefería que fuera un sitio en el que solo se compartiera con mujeres. 
 ![Estadística para Usuarios](https://github.com/PalomaZelada/SCL011-Social-Network/blob/master/src/IMG/estadismujeres.png)
+
+## Historias de Usuario
+
+1. Yo como usuaria de la red social quisiera poder crear una cuenta

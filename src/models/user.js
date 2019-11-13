@@ -2,9 +2,9 @@
 export const newAccount= (newEmail, newPassword) =>{
     
     firebase.auth().createUserWithEmailAndPassword(newEmail, newPassword)
-    // .then(function(){
-    //   templateHome()
-    // })
+    .then(function(){
+      sendVerification()
+    })
     .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -18,9 +18,7 @@ export const newAccount= (newEmail, newPassword) =>{
 export const loginUser = (getEmail, getPassword)=>{
   
     firebase.auth().signInWithEmailAndPassword(getEmail, getPassword)
-    // .then(function(){
-    //   templateHome()
-    //})
+
     .catch(function(error) {
      // Handle Errors here.
      var errorCode = error.code;
@@ -28,6 +26,19 @@ export const loginUser = (getEmail, getPassword)=>{
      window.alert("Error: "+ errorMessage)
      // ...
    });
+ }
+
+ //Enviar correo de verificacion
+ const sendVerification = () =>{
+  var user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+    // Email sent.
+    console.log("enviando correo")
+  }).catch(function(error) {
+    // An error happened.
+  });
+  
  }
  
  //Iniciar sesion con google
@@ -54,6 +65,21 @@ export const googleLogin= ()=>{
     });
   }
  //}
+
+ //Olvide mi contraseña
+export function sendPassword (emailPassword){
+var auth = firebase.auth();
+var emailAddress = emailPassword;
+
+auth.sendPasswordResetEmail(emailAddress).then(function() {
+  // Email sent.
+  console.log("correo enviado")
+}).catch(function(error) {
+  // An error happened.
+});
+
+}
+
 
 //Cerrar sesion
 export const logOut = () => {
