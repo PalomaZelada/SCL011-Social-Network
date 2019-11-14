@@ -19,7 +19,7 @@ import { printPost } from "../views/templateHome.js"
   });
 
 }
-//Mostras posts
+//Mostrar posts
 export const showAllPost = () => {
 var db = firebase.firestore();
 

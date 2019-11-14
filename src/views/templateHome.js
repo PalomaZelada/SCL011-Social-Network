@@ -14,9 +14,11 @@ export const templateHome = () =>{
     
     containerHome.innerHTML = contentHome;
     document.getElementById("root").appendChild(containerHome).innerHTML;
+    document.getElementById("loginButtons").style.display ="none";
 
 
 //Boton para cerrar sesion    
+
     const logOutBtn = document.getElementById("logOut");
     logOutBtn.addEventListener('click', () => {
         logOut();
@@ -41,12 +43,8 @@ export const printPost = (doc) => {
      <button id=editPost>Editar</button>
      <button id=deletePost${doc.id}>Borrar</button>
          `
-// let getPostId = doc.id
-// console.log(getPostId)
 const deleteBtn = document.getElementById("deletePost"+doc.id);
 deleteBtn.addEventListener('click', () => {
     deletePost(doc.id);
-        })
+    }); 
 }
-
-    
