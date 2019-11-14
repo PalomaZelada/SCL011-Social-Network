@@ -1,35 +1,13 @@
-export const addNewUser = () => { 
-    let getName = document.getElementById("name").value;
-    let getEmail = document.getElementById("newEmail").value;
-    let getPassword = document.getElementById("newPassword").value;
-    var db = firebase.firestore();
-
-    db.collection("users").add({
-      userName: getName,
-      userEmail: getEmail,
-      userPassword: getPassword,
-  })
-  .then(function(docRef) {
-      console.log("Document written with ID: ", docRef.id);
-  })
-  .catch(function(error) {
-      console.error("Error adding document: ", error);
-  });
-  db.collection("users").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
-}
-
-
+import { printPost } from "../views/templateHome.js"
+//Crear post
   export const addNewPost = () => { 
     let getPost = document.getElementById("newPost").value;
 
     var db = firebase.firestore();
 
     db.collection("Posts").add({
-      newComment: getPost,
+        userId: firebase.auth().currentUser.email,    
+        newComment: getPost,
 
   })
   .then(function(docRef) {
@@ -41,33 +19,23 @@ export const addNewUser = () => {
   });
 
 }
+//Mostras posts
 export const showAllPost = () => {
 var db = firebase.firestore();
 
-let showPost = document.getElementById("publishPost")
 db.collection("Posts").onSnapshot((querySnapshot) => {
+    document.getElementById("root2").innerHTML = '';
     querySnapshot.forEach((doc) => {
-        
         console.log(`${doc.id} => ${doc.data().newComment}`);
-        showPost.innerHTML += `
-        <!--<p id="postId">${doc.id}</p>-->
-        <textarea rows="10" cols="70" readonly>${doc.data().newComment}</textarea>
-        <button id=deletePost>Borrar</button>
-        <button id=editPost>Editar</button>
-        `
-    let getPostId = doc.id
-    const deleteBtn = document.getElementById("deletePost");
-    deleteBtn.addEventListener('click', () => {
-    deletePost(getPostId);
+        printPost(doc);
+    
     console.log("boton funciona")
 })
     });
-});
+};
 
-}
-function deletePost (id){
+export function deletePost (id){
     var db = firebase.firestore();
-
     db.collection("Posts").doc(id).delete().then(function() {
         console.log("Document successfully deleted!");
     }).catch(function(error) {
