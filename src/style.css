@@ -1,3 +1,85 @@
-textarea{
-    resize:none;
+body {
+    height: 100vh;
+    width: 60%;
+    display: block;
+    background-color:rgb(214, 175, 250);
+
+
 }
+
+section{
+   
+    background: rgba(156, 167, 196, 0.7);
+    margin: auto;
+    height: 100%;
+    width: 320px;
+    height: 420px;
+    left: 80%;
+    position: absolute;
+    transform: translate(-80%,50%);
+    box-sizing: border-box;
+    border-radius: 20%;
+}
+
+h1{ 
+    color: black;
+    size: -25%;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    transform: translate(100px,960%);
+    font-size: 100%;
+    left: 80%;
+    margin: auto;
+    max-width: 1000px;
+}
+
+h2{
+    
+    background-position: center;
+    size: -20%;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    left: 80%;
+    position: absolute;
+    transform: translate(-170%,1200%);
+    font-size: 90%;
+}
+h4{
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    list-style: none;
+    overflow: hidden;
+    width: 1000%;
+    position: relative;
+    display: table-cell;
+}
+
+
+h4 > ul{
+
+overflow: hidden;
+background: rgb(148, 178, 245);
+position: relative;
+ 
+}
+h4 li{
+    display: table-cell;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    
+
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    position: absolute;
+    top: 60px;
+    left: 80%;
+}
+

@@ -5,8 +5,8 @@ import {templateRegister} from "./views/templateRegister.js";
 import {templateForgotPass} from "./views/templateForgotPass.js";
 
 const changeRouter = (hash) => {
-    if(hash === ''){
-        return showTemplate('#/login');
+    if(hash === '#/home'){
+        return showTemplate(hash);
     }
 
     if(hash === '#/login'){
@@ -18,12 +18,15 @@ const changeRouter = (hash) => {
     if(hash ==='#/register'){
         return showTemplate(hash);
     }
+
+   
     if(hash ==='#/home'){
         return showTemplate(hash);
     }
     if(hash === '#/forgotPassword'){
         return showTemplate(hash);
     }
+
 };
 
 const showTemplate = (hash) =>{
@@ -48,9 +51,13 @@ switch (router){
         containerRoot.appendChild(templateRegister());
     break;
 
+    
+   
+
     case'forgotPassword':
         containerRoot.appendChild(templateForgotPass());
     break;
+
 
     default:
         containerRoot.innerHTML = `<h3>Error 404</h3>`;

@@ -1,6 +1,11 @@
+
+import { googleLogin } from "../models/user.js";
+
 import { addNewPost, showAllPost, deletePost } from "../models/initFirestore.js"
 import { logOut } from "../models/user.js"
 
+
+ 
 export const templateHome = () =>{
     const containerHome = document.createElement("div");
 
@@ -33,6 +38,7 @@ export const templateHome = () =>{
     return containerHome;
 }
 
+
 //Imprimir post
 export const printPost = (doc) => {
     document.getElementById("root2").innerHTML += `
@@ -49,4 +55,4 @@ deleteBtn.addEventListener('click', () => {
         })
 }
 
-    
+
