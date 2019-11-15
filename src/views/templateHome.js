@@ -6,7 +6,8 @@ import { logOut } from "../models/user.js"
 export const templateHome = () =>{
     const containerHome = document.createElement("div");
 
-    const contentHome = `<h3>HOME</h3>
+    const contentHome = `<h3>Bienvenidas a FeministPWR</h3>
+    <h2>El tema de la semana será: </h2>
     <textarea id="newPost" rows="10" cols="70" placeholder="Deja tu opinion"></textarea>
     <button id="publish"> Publicar </button>    
     <button id="logOut">Cerrar Sesion</button>
