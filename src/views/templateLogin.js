@@ -3,10 +3,11 @@ import { loginUser } from "../models/user.js";
 export const templateLogin = ()=>{
     const containerLogin = document.createElement("div");
 
-    const contentLogin = `<input id="getEmail" type="email" placeholder="Correo"/>
+    const contentLogin = `<h1>
+    <input id="getEmail" type="email" placeholder="Correo"/>
     <input id="getPassword" type="password" placeholder="Contraseña"/>
-    <button id="button-login" type="button">Iniciar Sesión</button>
-    <a href="#/forgotPassword">Olvide mi contraseña </a>
+    <button id="button-login" type="button">Iniciar Sesión</button></h1>
+    <a href="#/forgotPassword">Olvide mi contraseña </a> 
 `
 
 containerLogin.innerHTML = contentLogin;
