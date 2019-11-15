@@ -42,10 +42,12 @@ export const templateHome = () =>{
 //Imprimir post
 export const printPost = (doc) => {
     document.getElementById("root2").innerHTML += `
-     <div id="allPosts">${doc.data().newComment}</div>
+    <div class="publicPost">
+    <div id="allPosts">${doc.data().newComment}</div>
      <p id=emailPost>${doc.data().userId}</p>
      <button id=editPost>Editar</button>
      <button id=deletePost${doc.id}>Borrar</button>
+     </div>
          `
 const deleteBtn = document.getElementById("deletePost"+doc.id);
 deleteBtn.addEventListener('click', () => {
