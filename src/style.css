@@ -50,13 +50,12 @@ textarea{
     position: relative;
     margin-left: 20%;
     border-color: rgb(8, 8, 8);}
-.h3{
+h3, h2{
     height: 70%;
     text-align: center;
     margin: 0;
     margin-left: 25%;
-    width: 90%;
-    text-align: center;
+    width: 500px;
 }
 #publish, #logOut{
     border-radius: 20px;
