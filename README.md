@@ -31,4 +31,4 @@ Dentro de la encuesta también preguntamos la preferencia de participación de h
 
 7. Yo como usuaria de la red social quisiera recibir un link para poder verificar mi cuenta.
 
-8. Yo como usuaria de la red social quisiera poder cerrar sesión.
+8. Yo como usuaria de la red social quisiera poder cerrar sesión. 
