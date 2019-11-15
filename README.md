@@ -17,4 +17,18 @@ Dentro de la encuesta también preguntamos la preferencia de participación de h
 
 ## Historias de Usuario
 
-1. Yo como usuaria de la red social quisiera poder crear una cuenta
+1. Yo como usuaria de la red social quisiera poder crear una cuenta con usuario y contraseña.
+
+2. Yo como usuaria de la red social quisiera poder iniciar sesión con mi correo y contraseña.
+
+3. Yo como usuaria de la red social quisiera poder iniciar sesión con mi cuenta de Google.
+
+4. Yo como usuaria de la red social quisiera poder escribir un comentario.
+
+5. Yo como usuaria de la red social quisiera poder publicar mi comentario.
+
+6. Yo como usuaria de la red social quisiera poder reestablecer mi contraseña.
+
+7. Yo como usuaria de la red social quisiera recibir un link para poder verificar mi cuenta.
+
+8. Yo como usuaria de la red social quisiera poder cerrar sesión.

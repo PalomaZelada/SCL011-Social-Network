@@ -50,10 +50,7 @@ switch (router){
     case 'register':
         containerRoot.appendChild(templateRegister());
     break;
-
     
-   
-
     case'forgotPassword':
         containerRoot.appendChild(templateForgotPass());
     break;
